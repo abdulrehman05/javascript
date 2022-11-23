@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript Practice</title>
+</head>
+
+<body>
+<div>
+    <nav>
+        
+    <ul>
+        <h1>Tools</h1>
+        <li><button class="tabs" onclick="tabs('evenodd')">Even or odd</button></li>
+        <li><button class="tabs" onclick="tabs('mptable')">Multiplication table</button></li>
+        <li><button class="tabs" onclick="tabs('calculator')">Calculator</button></li>
+        <li><button class="tabs" onclick="tabs('randomword')">Random Code Generator</button></li>
+        <li><button class="tabs" onclick="tabs('contentgen')">Content Generator</button></li>
+    </ul>
+    </nav>
+    <div class="padding"></div>
+    <main>
+    <section class="sections" id="EvenOdd">
+        <h1>Even or Odd</h1><br>
+        <label for="EvenOddNum">Enter A Number</label><br>
+        <input type="number" name="number" id="EvenOddNum">
+        <button id="checkeo" onclick="checkeo()">Check</button><br>
+        <p id="eoresult"></p>
+
+    </section>
+
+    <section class="sections" id="mpTable">
+        <h1>Multiplication table</h1><br>
+        <label for="mpNumber">Enter a Number</label><br>
+        <input type="number" name="mpNumber" id="mpNumber">
+        <button id="checkmp" onclick="generatemp()">Generate</button><br>
+        <div id="mptablediv"></div>
+    </section>
+
+    <section class="sections" id="calculator">
+        <h1>Calculator</h1>
+
+        <div class= "formstyle">  
+            <form name = "form1">  
+               
+              <input id = "calc" type ="text" name = "answer"> <br>
+              <input type = "button" value = "1" onclick="tryin('1')">  
+              <input type = "button" value = "2" onclick="tryin('2')">  
+              <input type = "button" value = "3" onclick="tryin('3')">  
+               <input type = "button" value = "+" onclick="tryin('+')">  
+              <br>   
+                
+              <input type = "button" value = "4" onclick="tryin('4')">  
+              <input type = "button" value = "5" onclick="tryin('5')">  
+              <input type = "button" value = "6" onclick="tryin('6')">  
+              <input type = "button" value = "-" onclick="tryin('-')">  
+              <br> 
+                
+              <input type = "button" value = "7" onclick="tryin('7')">  
+              <input type = "button" value = "8" onclick="tryin('8')">  
+              <input type = "button" value = "9" onclick="tryin('9')">  
+              <input type = "button" value = "*" onclick="tryin('*')">  
+              <br> 
+                
+                
+              <input type = "button" value = "/" onclick="tryin('/')">  
+              <input type = "button" value = "0" onclick="tryin('0')">  
+                <input type = "button" value = "." onclick="tryin('.')">  
+              <input type = "button" value = "=" onclick = "calcs()">  
+              <br>   
+              <input type = "button" value = "Clear All" onclick = "clears()" id= "clear" >  
+              <br>   
+                
+            </form>
+    </section>
+
+    <section class="sections" id="randomword">  
+        <h1>Random Code Generator</h1>      
+        <button id="randomgen" onclick="generaterandom()">Generate</button>
+        <p id="randomnum"></p>
+    </section>
+
+    <section class="sections" id="contg">
+        <h1>Content Generator</h1>
+        <label for="cgnum">Enter the number of content you wanna generate</label><br>
+        <input type="number" name="cgnum" id="cgnum">
+        <button id="cgen" onclick="contentgeneration()">Generate</button><br>
+        <p class="layout" onclick="togglestyle()">Layout: Grid</p>
+        <div class="contentgen" id="contentgen">
+        </div>
+    </section>
+</main>
+</div>
+    <script src="js.js"></script>
+</body>
+
+</html>
