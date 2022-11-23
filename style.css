@@ -1,47 +1,58 @@
-*{margin:0;
-    padding:0;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-body{
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
     color: white;
     background: rgb(159, 197, 255);
 }
-div{
-    display:flex;
+
+div {
+    display: flex;
 }
-button{
+
+button {
     color: white;
     background: rgb(78, 110, 255);
 }
- button:hover{
-    background: rgb(91, 121, 255);   
+
+button:hover {
+    background: rgb(91, 121, 255);
 }
- button:active{
-    background: rgb(57, 84, 202);  
+
+button:active {
+    background: rgb(57, 84, 202);
 }
-nav{
+
+nav {
     padding: 30px 0;
     background-color: rgb(91, 132, 194);
     height: 100vh;
-    width: 30%;    
+    width: 30%;
     border: 1px solid white;
     box-sizing: border-box;
     position: fixed;
 }
-.padding{
+
+.padding {
     padding: 30px 0;
     background-color: rgb(91, 132, 194);
     height: 100vh;
-    width: 30%;    
+    width: 30%;
     border: 1px solid white;
     box-sizing: border-box;
 }
-nav ul{
+
+nav ul {
     list-style: none;
     text-align: center;
     font-size: 30px;
     color: white;
 }
-nav button{    
+
+nav button {
     margin: 5px 0;
     padding: 20px 0;
     font-size: 18px;
@@ -51,55 +62,65 @@ nav button{
     border: 1px solid white;
     box-sizing: border-box;
 }
-nav button:hover{    
+
+nav button:hover {
     background: rgba(255, 255, 255, .2);
 }
 
-main{
-    width: 70%;    
+main {
+    width: 70%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-h1{
+
+h1 {
     font-size: 40px;
 }
-section{
+
+section {
     height: 75vh;
 }
-label{
+
+label {
     display: inline-block;
     padding: 10px;
     font-size: 30px;
 }
-#EvenOdd input{
+
+#EvenOdd input {
     margin: 10px 0px 10px 10px;
     height: 40px;
     width: 200px;
 }
-#EvenOdd button{
+
+#EvenOdd button {
     height: 44px;
     width: 60px;
 }
-#EvenOdd p{
+
+#EvenOdd p {
     color: red;
     font-size: 30px;
 }
 
 
-#mpTable input{
+#mpTable input {
     height: 40px;
     width: 200px;
 }
-#mpTable button{
+
+#mpTable button {
     height: 44px;
     width: 60px;
 }
-#mpTable p{
+
+#mpTable p {
     padding: 0;
 }
-#mpTable #mptablediv{
+
+#mpTable #mptablediv {
     padding: 10px 0;
     width: 100%;
     color: white;
@@ -108,18 +129,20 @@ label{
     flex-flow: column;
 }
 
-#calculator{
-    background: rgb(141, 162, 255); 
+#calculator {
+    background: rgb(141, 162, 255);
     border: 2px solid white;
     padding: 20px;
     border-radius: 10px;
 }
-#calculator form{
+
+#calculator form {
     display: block;
     white-space: none;
-    
+
 }
-#calculator input{
+
+#calculator input {
     width: 100%;
     height: 40px;
     margin: 4px;
@@ -129,30 +152,35 @@ label{
     color: white;
     font-weight: bold;
 }
-#calculator input:hover{
-    background: rgb(91, 121, 255);    
+
+#calculator input:hover {
+    background: rgb(91, 121, 255);
 }
-#calculator input:active{
-    background: rgb(57, 84, 202);    
+
+#calculator input:active {
+    background: rgb(57, 84, 202);
 }
-#calculator input[type="button"]{
-    
+
+#calculator input[type="button"] {
+
     height: 60px;
     width: 90px;
 }
-#calculator #clear{
+
+#calculator #clear {
     width: 100%;
 }
 
-#randomword button{
+#randomword button {
     width: 100%;
     color: white;
     font: 34px bold;
-    height: 100px;  
+    height: 100px;
     background: rgb(78, 110, 255);
     padding: 10px;
 }
-#randomword p{
+
+#randomword p {
     font-size: 20px;
     margin: 20px;
     padding: 3px;
@@ -168,69 +196,78 @@ label{
     flex-wrap: wrap;
     box-sizing: border-box;
 }
-.contentgen .content{
+
+.contentgen .content {
     display: block;
     margin: 10px;
     min-width: 200px;
-    flex:1 1 0;
+    flex: 1 1 0;
     background-color: rgb(118, 50, 196);
     height: fit-content;
-    padding: 20px;    
+    padding: 20px;
     box-sizing: border-box;
 }
-.contentgen div div{
+
+.contentgen div div {
     height: 200px;
-    background: red;    
-    border:1px solid white;
+    background: red;
+    border: 1px solid white;
 }
 
-.stacked .content{  
-    display: flex;  
-    flex:1 1 100%;
+.stacked .content {
+    display: flex;
+    flex: 1 1 100%;
 }
-.stacked > .content > div{
+
+.stacked>.content>div {
     height: 80px;
     width: 150px;
 }
-.stacked span{
+
+.stacked span {
     padding: 10px;
 }
-.layout{
-font-weight: bold;
-color: gray;
-cursor: pointer;
+
+.layout {
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
 }
 
 @media screen and (max-width:600px) {
-    
-#calculator{
-    background: rgb(141, 162, 255); 
-    border: 1px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    height: auto;
-}
-#calculator form{
-    display: block;
-    white-space: none;
-    
-}
-#calculator input{
-    width: 100%;
-    height: 40px;
-    margin: 2px;
-    box-sizing: border-box;
-    background: rgb(78, 110, 255);
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-}
-#calculator input[type="button"]{
-    
-    height: 40px;
-    width: 60px;
-}
-#calculator #clear{
-    width: 100%;
-}
+
+    #calculator {
+        background: rgb(141, 162, 255);
+        border: 1px solid white;
+        padding: 5px;
+        border-radius: 10px;
+        height: auto;
+    }
+
+    #calculator form {
+        display: block;
+        white-space: none;
+
+    }
+
+    #calculator input {
+        width: 100%;
+        height: 40px;
+        margin: 2px;
+        box-sizing: border-box;
+        background: rgb(78, 110, 255);
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    #calculator input[type="button"] {
+
+        height: 40px;
+        width: 60px;
+    }
+
+    #calculator #clear {
+        width: 100%;
+    }
 }

@@ -27,7 +27,7 @@ function generatemp() {
 const randomgen = document.querySelector('#randomgen');
 const randomnum = document.querySelector('#randomnum');
 
-const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
 const generaterandom = () => {
     const randomnumber = generate();
@@ -36,21 +36,21 @@ const generaterandom = () => {
 const generate = () => {
     let result = ''
     for (let i = 0; i < 10; i++) {
-        result += characters.charAt(Math.floor(Math.random()*characters.length))
-        
+        result += characters.charAt(Math.floor(Math.random() * characters.length))
+
     }
     return result
 
 };
 
-function tryin(sss){
+function tryin(sss) {
     form1.answer.value += sss
 }
 
-function calcs(){
-    form1.answer.value = eval(form1.answer.value) 
+function calcs() {
+    form1.answer.value = eval(form1.answer.value)
 }
-function clears(){
+function clears() {
     form1.answer.value = ' '
 }
 
@@ -65,29 +65,29 @@ const randomword = document.querySelector('#randomword');
 const contentgen = document.querySelector('#contg');
 
 const allsections = document.querySelectorAll('.sections');
-allsections.forEach(section =>{
+allsections.forEach(section => {
     section.style.display = 'none'
- })
-function tabs(name){
-    allsections.forEach(section =>{
-       section.style.display = 'none'
+})
+function tabs(name) {
+    allsections.forEach(section => {
+        section.style.display = 'none'
     })
-    switch(name){
+    switch (name) {
         case 'evenodd':
             EvenOdd.style.display = 'block';
-        break
+            break
         case 'mptable':
             mpTable.style.display = 'block';
-        break
+            break
         case 'calculator':
             calculator.style.display = 'block';
-        break
+            break
         case 'randomword':
             randomword.style.display = 'block';
-        break
+            break
         case 'contentgen':
             contentgen.style.display = 'block';
-        break
+            break
     }
 }
 const content = document.querySelector("#contentgen");
@@ -95,26 +95,26 @@ const layout = document.querySelector(".layout");
 const cgnum = document.querySelector("#cgnum");
 
 
-function togglestyle(){
-content.classList.toggle('stacked');
-if(layout.innerText == 'Layout: Grid'){
-    layout.innerText = 'Layout: Stacked'
-}else{
-    layout.innerText = 'Layout: Grid'
-}
+function togglestyle() {
+    content.classList.toggle('stacked');
+    if (layout.innerText == 'Layout: Grid') {
+        layout.innerText = 'Layout: Stacked'
+    } else {
+        layout.innerText = 'Layout: Grid'
+    }
 }
 
-function contentgeneration(){
+function contentgeneration() {
     let intnum = cgnum.value
     content.innerHTML = ''
-for(i=1; i<=intnum; i++){
-    let color = 'rgb(' + Math.floor(Math.random()*255) + ',' + Math.floor(Math.random()*255) + ',' + Math.floor(Math.random()*255) + ');' 
-    let contentTemplate = `<div class="content">
+    for (i = 1; i <= intnum; i++) {
+        let color = 'rgb(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ');'
+        let contentTemplate = `<div class="content">
     <div style="background:${color}"></div>
     <span><h2>Title `+ i + ` </h2>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p></span>
 </div>`
-content.innerHTML += contentTemplate
-}
+        content.innerHTML += contentTemplate
+    }
 
 }
